@@ -1,5 +1,5 @@
 {% set name = "SISPPEO" %}
-{% set version = "1.0" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/inrae/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: b9b11be0cf68642d9c7e608800889d2f11bce6358ced1184e351b7e38da2eeb8
+  sha256: 53a4abe35de4ed9e8029c32e0d7531f981047986f5e6b3c1a45a8bc873305fd2
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
   entry_points:
     - sisppeo = sisppeo.cli:cli
@@ -63,6 +63,7 @@ about:
     (Water and Land) from satellite optical imagery (e.g, Sentinel-2/MSI,
     Sentinel-3/OLCI, Landsat 8/OLI…).
   dev_url: https://gitlab.irstea.fr/telquel-obs2co/satellite/sisppeo/-/tree/dev
+  doc_url: https://inrae.github.io/SISPPEO
 
 extra:
   recipe-maintainers:
