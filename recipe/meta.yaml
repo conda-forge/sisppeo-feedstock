@@ -1,5 +1,5 @@
 {% set name = "SISPPEO" %}
-{% set version = "1.1.0" %}
+{% set version = "1.1.1-cnes" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/inrae/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 53a4abe35de4ed9e8029c32e0d7531f981047986f5e6b3c1a45a8bc873305fd2
+  sha256: a62e4f315083ee460bbb37d473b6afeae38144789e4b47c9c546a37b9cc80b96
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - sisppeo = sisppeo.cli:cli
 
@@ -56,7 +56,7 @@ about:
   home: https://github.com/inrae/SISPPEO
   license: Apache-2.0
   license_file: LICENSE
-  summary: 'Satellite Imagery & Signal Processing Packages for Earth Observation'
+  summary: Satellite Imagery & Signal Processing Packages for Earth Observation
   description: |
     SISPPEO is an open source project and Python package (with a CLI)
     allowing one to extract synthetic information useful for Earth observation
