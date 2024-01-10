@@ -1,5 +1,5 @@
 {% set name = "SISPPEO" %}
-{% set version = "1.1.0" %}
+{% set version = "1.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/inrae/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 53a4abe35de4ed9e8029c32e0d7531f981047986f5e6b3c1a45a8bc873305fd2
+  sha256: 065f4e8313734c8aec5c0d6623dd292a04ac81d8851a461040dfee99f962392f
 
 build:
   noarch: python
